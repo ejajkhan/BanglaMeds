@@ -1,0 +1,39 @@
+{% extends 'shop/basic.html' %}
+{% load static %}
+{% block title %} {{product.car_name}} {% endblock %}
+{% block body %}
+<h2 style="color:teal;text-align:center;margin-bottom:40px;margin-top:4rem;">{{medicine.name}}</h2>
+<div>
+<!-- Grid row -->
+    <div class="row justify-content-center">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+          <a href="typeView?val={{medicine.type.id}}" style="text-decoration:none;"><h5 style="color:brown;text-align:center;">Type: {{medicine.type}}</h5></a>
+          {% if medicine.quantity > 0 %}
+          <h5 style="text-align:center;color:green">Available</h5>
+          {% else %}
+          <h5 style="text-align:center;color:red"> Not available at this moment.</h5>
+          {% endif %}
+          <h5 style="text-align:center;color:#174542;">Price: {{medicine.price}}</h5>
+          <h5 style="text-align:center;color:#102b0c;">Type: {{medicine.type}}</h5>
+          <h5 style="text-align:center;color:#102b0c;">Disease: {{medicine.disease}}</h5>
+
+          <a href="addcart?val={{medicine.id}}" target="_blank" class="btn btn-primary" style="width:30rem;margin-left:3rem;background-color:brown">Buy</a>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+        <!-- Links -->
+        <ul class="list-unstyled">
+          <li >
+            <a href="" ><img src='/media/{{medicine.image}}' width="550" height="400"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+</div>
+
+{% endblock %}

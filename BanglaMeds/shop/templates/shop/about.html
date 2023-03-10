@@ -1,0 +1,32 @@
+{% extends 'shop/basic.html' %}
+{% load static %}
+{% block title %} About Us {% endblock %}
+{% block body %}
+
+<h1 style="text-align:center;color:teal;margin-bottom:25px">About Us</h1>
+<div>
+<!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <p style="margin-left:10px;">
+BanglaMeds is the biggest digital pharmacy of Bangladesh. Currently the free home delivery service is available to residents of Dhaka city only, and throughout the country for a very nominal charge and no minimum order volume restrictions. BanglaMeds was created with a vision to serve people with a smile, to provide quality service over a virgin sector and become the industry leader in E-commerce healthcare.
+        </p>
+      </div>
+      <!-- Grid column -->
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+        <!-- Links -->
+        <ul class="list-unstyled">
+          <li >
+            <a href="about" ><img src="{%static 'shop/img/aboutUs.jpg'%}" width="600" height="400"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+</div>
+</div>
+
+{% endblock %}
